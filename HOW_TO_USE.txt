@@ -1,0 +1,58 @@
+================================================================================
+  ROBUSTVIDEOMAT TING - M1 MAC EDITION
+  Quick Reference Guide
+================================================================================
+
+SUPER SIMPLE USAGE:
+-------------------
+
+1. Put your video(s) in the input_videos/ folder
+
+2. Run the script:
+   ./process_video.sh
+
+3. Get your results from output_videos/ folder!
+
+EXAMPLES:
+---------
+
+Process ALL videos in input_videos/:
+   ./process_video.sh
+
+Process ONE specific video:
+   ./process_video.sh input_videos/my_video.mp4
+
+Specify custom output name:
+   ./process_video.sh input_videos/my_video.mp4 my_output.mp4
+
+WHAT YOU GET:
+-------------
+✓ Background removed
+✓ Green screen background (perfect for video editing)
+✓ M1 GPU acceleration (~12 FPS processing speed)
+✓ Automatic batch processing
+✓ Progress bars
+
+SUPPORTED FORMATS:
+------------------
+MP4, MOV, AVI, MKV
+
+FILES:
+------
+input_videos/     ← Put your videos here
+output_videos/    ← Processed videos appear here (with _green suffix)
+process_video.sh  ← The script to run
+weights/          ← Model weights (already downloaded)
+
+TROUBLESHOOTING:
+----------------
+
+"Permission denied" → Run: chmod +x process_video.sh
+
+Processing too slow → First few frames are slower, then speeds up to 12 FPS
+
+Need help → Check QUICK_START.md or README_M1.md
+
+================================================================================
+Everything is set up and ready to use!
+================================================================================
