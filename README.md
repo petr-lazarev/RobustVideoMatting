@@ -4,6 +4,8 @@
 
 <p align="center">English | <a href="README_zh_Hans.md">中文</a></p>
 
+> **🍎 Apple Silicon (M1/M2/M3) Mac Users:** This fork includes full compatibility with Apple Silicon Macs! See [README_M1.md](README_M1.md) for quick setup, or jump to [M1 Mac Installation](#m1-mac-installation) below.
+
 Official repository for the paper [Robust High-Resolution Video Matting with Temporal Guidance](https://peterl1n.github.io/RobustVideoMatting/). RVM is specifically designed for robust human video matting. Unlike existing neural models that process frames as independent images, RVM uses a recurrent neural network to process videos with temporal memory. RVM can perform matting in real-time on any videos without additional inputs. It achieves **4K 76FPS** and **HD 104FPS** on an Nvidia GTX 1080 Ti GPU. The project was developed at [ByteDance Inc.](https://www.bytedance.com/)
 
 <br>
@@ -128,6 +130,44 @@ We recommend MobileNetv3 models for most use cases. ResNet50 models are the larg
 </table>
 
 All models are available in [Google Drive](https://drive.google.com/drive/folders/1pBsG-SCTatv-95SnEuxmnvvlRx208VKj?usp=sharing) and [Baidu Pan](https://pan.baidu.com/s/1puPSxQqgBFOVpW4W7AolkA) (code: gym7).
+
+<br>
+
+## M1 Mac Installation
+
+**Apple Silicon (M1/M2/M3) Macs require updated dependencies.** This fork provides full compatibility with native GPU acceleration via Metal Performance Shaders (MPS).
+
+### Quick Start for M1 Macs
+
+1. **Install M1-compatible dependencies:**
+```bash
+pip install -r requirements_inference_m1.txt
+```
+
+2. **Download model weights** (see [Download](#download) section above)
+
+3. **Process videos with the convenience script:**
+```bash
+# Process all videos in input_videos/ folder
+./process_video.sh
+
+# Or process a specific video
+./process_video.sh input_videos/my_video.mp4
+```
+
+### What's Different?
+
+- ✅ **PyTorch 2.x** with MPS (GPU) support (replaces 1.9.0)
+- ✅ **Updated PyAV** library compatible with Apple Silicon
+- ✅ **Batch processing script** for easy video conversion
+- ✅ **~12 FPS** processing speed with M1 GPU acceleration
+
+### Detailed Documentation
+
+For comprehensive M1 setup instructions, troubleshooting, and advanced options:
+- **[README_M1.md](README_M1.md)** - Complete M1 Mac guide
+- **[QUICK_START.md](QUICK_START.md)** - Simple usage examples
+- **[CHANGES.md](CHANGES.md)** - All changes from original repository
 
 <br>
 

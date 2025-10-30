@@ -1,0 +1,10 @@
+# M1-compatible requirements for RobustVideoMatting inference
+# PyTorch with Apple Silicon support (MPS)
+torch>=2.0.0
+torchvision>=0.15.0
+# Video processing
+av>=10.0.0
+# Progress bars
+tqdm>=4.61.1
+# Image sequence support
+pims>=0.5
